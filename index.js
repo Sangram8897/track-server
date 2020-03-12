@@ -1,8 +1,10 @@
+require('./src/models/User')
 const express = require("express");
 const PORT = process.env.PORT || 5000
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const authRoutes=require('./src/routes/authRoutes')
+
 
 const mongoURI= 'mongodb+srv://admin:Sangram@8897@cluster0-paves.mongodb.net/test?retryWrites=true&w=majority'
 mongoose
