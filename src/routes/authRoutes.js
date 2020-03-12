@@ -8,8 +8,9 @@ router.post('/signup',async(req,res)=>{
     try{
         const user=await new User({country_code,phone_number,password});
         await user.save()
-        const token=jwt.sign({userId:user._id},'SECRETE_KEY',{expiresIn:'1 hour'})
-        res.send({token});
+        // const token=jwt.sign({userId:user._id},'SECRETE_KEY',{expiresIn:'1 hour'})
+        // res.send({token});
+        return res.status(200).send('SignUp Successful :)')
     }
     catch(err)
     {
