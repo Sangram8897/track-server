@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const bcrypt = require("bcrypt");
 const userSchema=new mongoose.Schema({
     country_code:{
         unique:true,
