@@ -1,9 +1,9 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const jwt = require("jsonwebtoken");
-const User=mongoose.model('User')
+const requireAuth=require('./src/middleware/requireAuth');
+
 const router=express.Router();
-router.post('/info',async(req,res)=>{
+router.post('/info',requireAuth,async(req,res)=>{
     return res.status(200).send('Test Successful :)')
 });
 
