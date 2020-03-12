@@ -27,7 +27,8 @@ router.post('/signin',async(req,res)=>{
         })
     }
     const user= await User.findOne({
-        phone_number:phone_number
+        phone_number:phone_number, 
+        country_code:country_code 
     });
     console.log(user)
     if(!user)
